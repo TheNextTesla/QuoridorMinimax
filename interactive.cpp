@@ -9,7 +9,6 @@
 #include <fstream>
 #include <iostream>
 #include <streambuf>
-#include <unordered_map>
 
 #include "game.h"
 #include "optimization_omp.hpp"
