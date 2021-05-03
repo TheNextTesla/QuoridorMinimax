@@ -126,7 +126,7 @@ Move minimax_parallel_helper(Board board, unsigned long ideal_depth, bool player
     table_map transposition_table;
     transposition_table.reserve((int) pow(MAX_BRANCHING, SAVE_DEPTH));
 
-    #pragma omp parallel
+    #pragma omp parallel shared(best_move, best_score, alpha, transposition_table)
     {
         Board thread_board = board;
 
