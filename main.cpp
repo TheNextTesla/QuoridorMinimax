@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     std::string str((std::istreambuf_iterator<char>(t)),
                      std::istreambuf_iterator<char>());
     Board start_board = generate_from_text(str);
-    std::cout << output_to_ascii(start_board);
+    // std::cout << output_to_ascii(start_board);
     bool starting_player = (bool) 1;
 
     Move best_next_move = minimax_parallel_helper(start_board, DEPTH, starting_player);
